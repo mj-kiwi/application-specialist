@@ -1,6 +1,21 @@
 ## What's this project?
 It's the answer to the code test for Application Specialist
 
+## Question
+INPUT: APPLICATION SPECIALIST \
+OUTPUT: tiacpniaipa
+
+figure out the relationship with the INPUT and OUTPUT \
+implement a function to put the INPUT as parameter and get the output as the same as the OUTPUT
+
+## Answer
+
+My implement of the code is on [Answer](src/Answer.php)
+
+## Test Cases
+
+Please check the code on [AnswerTest](tests/AnswerTest.php)
+
 ## How to run it
 
 1. install the latest php and composer

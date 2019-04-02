@@ -11,7 +11,10 @@ namespace MjLiang\ApplicationSpecialist;
 
 class Answer
 {
-
+    /**
+     * @param string $input
+     * @return string
+     */
     public function stringProcess(string $input) : string
     {
         $return = '';
@@ -19,9 +22,9 @@ class Answer
         $split = str_split($input, 2);
 
         foreach ($split as $item) {
-            $return .= $item[0] ?? '';
+            $return = ($item[0] ?? '') . $return;
         }
 
-        return strrev(strtolower($return));
+        return strtolower($return);
     }
 }
