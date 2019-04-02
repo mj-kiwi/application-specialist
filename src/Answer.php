@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * Created by PhpStorm.
  * User: MJ
@@ -8,15 +9,13 @@
 
 namespace MjLiang\ApplicationSpecialist;
 
-
 class Answer
 {
 
     public function stringProcess(string $input) : string
     {
-        $input = str_replace(' ', '',$input);
-
         $return = '';
+        $input = str_replace(' ', '', $input);
         $split = str_split($input, 2);
 
         foreach ($split as $item) {

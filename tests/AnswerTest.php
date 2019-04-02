@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * Created by PhpStorm.
  * User: MJ
@@ -21,7 +22,7 @@ class AnswerTest extends TestCase
             ['APPLICATION SPECIALISTS', 'tiacpniaipa'],
             ['', ''],
             ['APP', 'pa'],
-            ['SPECIALISTS', 'sslies']
+            ['SPECIALISTS', 'sslies'],
         ];
     }
 
@@ -32,5 +33,27 @@ class AnswerTest extends TestCase
     {
         $answer = new Answer();
         $this->assertEquals($b, $answer->stringProcess($a));
+    }
+
+    public function wrongTypesProvider()
+    {
+        return [
+            [1000],
+            [false],
+            [12.3],
+            [new \stdClass()],
+            [null],
+        ];
+    }
+
+    /**
+     * @test
+     * @dataProvider wrongTypesProvider
+     */
+    public function wrongInputType($a)
+    {
+        $this->expectException(\TypeError::class);
+        $answer = new Answer();
+        $answer->stringProcess($a);
     }
 }
