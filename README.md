@@ -5,7 +5,7 @@ It's the answer to the code test for Application Specialist
 INPUT: APPLICATION SPECIALIST \
 OUTPUT: tiacpniaipa
 
-figure out the relationship with the INPUT and OUTPUT \
+figure out the relationship between the INPUT and OUTPUT \
 implement a function to put the INPUT as parameter and get the output as the same as the OUTPUT
 
 ## Answer
